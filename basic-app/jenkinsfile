@@ -4,16 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
+                
                     sh 'npm install'
-                }
+                
             }
         }
         stage('Test') {
             steps {
-                script {
                     sh 'npm test'  // Agar test hain to run karein, nahi to is step ko hata sakte hain
-                }
+                
             }
         }
         stage('Build Docker Image') {
